@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		EC2AB2FD269370E90088EC1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2AB2FC269370E90088EC1A /* AppDelegate.swift */; };
 		EC2AB2FF269370E90088EC1A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2AB2FE269370E90088EC1A /* SceneDelegate.swift */; };
-		EC2AB301269370E90088EC1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2AB300269370E90088EC1A /* ViewController.swift */; };
 		EC2AB304269370E90088EC1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC2AB302269370E90088EC1A /* Main.storyboard */; };
 		EC2AB306269370EC0088EC1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC2AB305269370EC0088EC1A /* Assets.xcassets */; };
 		EC2AB309269370EC0088EC1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC2AB307269370EC0088EC1A /* LaunchScreen.storyboard */; };
+		EC2AB316269372650088EC1A /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2AB315269372650088EC1A /* Student.swift */; };
+		EC2AB3182693738D0088EC1A /* StudentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2AB3172693738D0088EC1A /* StudentController.swift */; };
+		EC2AB31C2693773B0088EC1A /* StudentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2AB31B2693773B0088EC1A /* StudentTableViewController.swift */; };
+		EC2AB31E2693901A0088EC1A /* StudentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2AB31D2693901A0088EC1A /* StudentDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EC2AB2F9269370E90088EC1A /* StudentList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC2AB2FC269370E90088EC1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC2AB2FE269370E90088EC1A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EC2AB300269370E90088EC1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EC2AB303269370E90088EC1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC2AB305269370EC0088EC1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC2AB308269370EC0088EC1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC2AB30A269370EC0088EC1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC2AB315269372650088EC1A /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		EC2AB3172693738D0088EC1A /* StudentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentController.swift; sourceTree = "<group>"; };
+		EC2AB31B2693773B0088EC1A /* StudentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentTableViewController.swift; sourceTree = "<group>"; };
+		EC2AB31D2693901A0088EC1A /* StudentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +47,7 @@
 			isa = PBXGroup;
 			children = (
 				EC2AB2FB269370E90088EC1A /* StudentList */,
+				EC2AB30A269370EC0088EC1A /* Info.plist */,
 				EC2AB2FA269370E90088EC1A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,15 +63,49 @@
 		EC2AB2FB269370E90088EC1A /* StudentList */ = {
 			isa = PBXGroup;
 			children = (
+				EC2AB310269371040088EC1A /* Delegates */,
+				EC2AB314269371330088EC1A /* Model */,
+				EC2AB3112693710D0088EC1A /* View Controllers */,
+				EC2AB3122693711B0088EC1A /* Resources */,
+			);
+			path = StudentList;
+			sourceTree = "<group>";
+		};
+		EC2AB310269371040088EC1A /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
 				EC2AB2FC269370E90088EC1A /* AppDelegate.swift */,
 				EC2AB2FE269370E90088EC1A /* SceneDelegate.swift */,
-				EC2AB300269370E90088EC1A /* ViewController.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		EC2AB3112693710D0088EC1A /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EC2AB31B2693773B0088EC1A /* StudentTableViewController.swift */,
+				EC2AB31D2693901A0088EC1A /* StudentDetailViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		EC2AB3122693711B0088EC1A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				EC2AB302269370E90088EC1A /* Main.storyboard */,
 				EC2AB305269370EC0088EC1A /* Assets.xcassets */,
 				EC2AB307269370EC0088EC1A /* LaunchScreen.storyboard */,
-				EC2AB30A269370EC0088EC1A /* Info.plist */,
 			);
-			path = StudentList;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EC2AB314269371330088EC1A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EC2AB315269372650088EC1A /* Student.swift */,
+				EC2AB3172693738D0088EC1A /* StudentController.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +178,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC2AB301269370E90088EC1A /* ViewController.swift in Sources */,
+				EC2AB3182693738D0088EC1A /* StudentController.swift in Sources */,
 				EC2AB2FD269370E90088EC1A /* AppDelegate.swift in Sources */,
 				EC2AB2FF269370E90088EC1A /* SceneDelegate.swift in Sources */,
+				EC2AB31C2693773B0088EC1A /* StudentTableViewController.swift in Sources */,
+				EC2AB316269372650088EC1A /* Student.swift in Sources */,
+				EC2AB31E2693901A0088EC1A /* StudentDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
