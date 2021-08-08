@@ -21,3 +21,13 @@ class Student {
     let lastName: String
     let age: Int
 }
+
+extension Student: Equatable {}
+
+func ==(lhs: Student, rhs: Student) -> Bool {
+    if lhs.firstName != rhs.firstName { return false }
+    if lhs.lastName != rhs.lastName { return false }
+    if lhs.age != rhs.age { return false }
+    
+    return true
+}

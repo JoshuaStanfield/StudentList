@@ -26,5 +26,9 @@ class StudentController {
         return student
     }
     
+    func delete(student: Student) {
+        
+    }
+    
     var students: [Student]
 }
