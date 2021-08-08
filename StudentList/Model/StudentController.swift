@@ -17,5 +17,14 @@ class StudentController {
         Student(firstName: "Hiro", lastName: "Stanfield", age: 1)
         ]
     }
+    
+    //CRUD
+    func create(studentWithFirstName firstName: String, lastName: String, age: Int) -> Student {
+        let student = Student(firstName: firstName, lastName: lastName, age: age)
+        
+        self.students.append(student)
+        return student
+    }
+    
     var students: [Student]
 }
