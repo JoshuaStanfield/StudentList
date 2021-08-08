@@ -10,13 +10,12 @@ import Foundation
 class StudentController {
     //Provides a list of students. This is VERY simplified for learning's sake. More detials to come. The purpose here is to maintain a list of Students or model objects.
     
-    //Singleton
-    static var students: [Student] {
-        return[
+    init() {
+        self.students = [
         Student(firstName: "Josh", lastName: "Stanfield", age: 32),
         Student(firstName: "Naomi", lastName: "Stanfield", age: 33),
         Student(firstName: "Hiro", lastName: "Stanfield", age: 1)
         ]
     }
-    
+    var students: [Student]
 }
