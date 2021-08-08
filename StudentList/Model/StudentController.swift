@@ -27,7 +27,9 @@ class StudentController {
     }
     
     func delete(student: Student) {
-        
+        if let index = self.students.index(where: { $0 == student }) {
+            self.students.remove(at: index)
+        }
     }
     
     var students: [Student]

@@ -25,7 +25,7 @@ class StudentTableViewController: UITableViewController {
         // This func is a good example of MVC. The view asks this viewController to get data from the model.
         // #warning Incomplete implementation, return the number of rows. Each row will be a student.
         //How many students are there? Well, it's the modelController that is maintaining how many students there are, so we need to ask the modelController for that information.
-        return studentController.students.count
+        return self.studentController.students.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -34,7 +34,7 @@ class StudentTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "StudentCell", for: indexPath) //identifier MUST match.
         // Configure the cell here...
         //First get the student.
-        let student = studentController.students[indexPath.row]
+        let student = self.studentController.students[indexPath.row]
         
         //Then assign the student information to the cell.
         cell.textLabel?.text = student.firstName + " " + student.lastName
@@ -52,7 +52,7 @@ class StudentTableViewController: UITableViewController {
         guard let tappedIndexPath = tableView.indexPathForSelectedRow else {return}
         
         //Now get the specific student from the modelController for related tapped cell.
-        let student = studentController.students[tappedIndexPath.row]
+        let student = self.studentController.students[tappedIndexPath.row]
         
         //We need to be able to access the next ViewController so we can pass the information there. The "segue" property in the above "prepare(for segue:" function has a property to get data from the next VC.
         //segue.destination grabs the next VC as a generic VC, and then we 'cast' it as the specific VC we need it to be.
